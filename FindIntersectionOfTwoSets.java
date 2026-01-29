@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class FindUnionOfTwoSets {
+public class FindIntersectionOfTwoSets {
     public static void main(String[] args) {
         Set <Integer> set1 = new HashSet<>();
         set1.add(3);
@@ -13,9 +13,7 @@ public class FindUnionOfTwoSets {
         set2.add(4);
         set2.add(5);
 
-        Set <Integer> union = new HashSet<>(set1);
-        union.addAll(set2);
-
-        System.out.println(union);
+        set1.retainAll(set2);
+        System.out.println(set1);
     }
 }
